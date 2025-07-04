@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="robots" content="index,follow" />
+
+  <title>Rica Games - Terror Sexta-feira 13</title>
+  <meta name="description" content="Assista vídeos aterrorizantes do Rica Games inspirados em Sexta-feira 13 e Jason. Vídeos exclusivos de horror e suspense." />
+  <meta name="keywords" content="Rica Games, Jason, Sexta-feira 13, terror, horror, filmes de terror, vídeos assustadores, suspense" />
+
+  <style>
+    body {
+      margin: 0;
+      background-color: #0a0a0a;
+      color: #e60000;
+      font-family: 'Trebuchet MS', sans-serif;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+      position: relative;
+      background-image: url('https://i.imgur.com/RVTpOqE.png'); /* textura escura com efeito sutil (opcional) */
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+
+    h1 {
+      text-align: center;
+      margin-bottom: 20px;
+      color: #ff0000;
+      text-shadow: 2px 2px 8px black;
+      font-family: 'Creepster', cursive;
+      font-size: 3em;
+    }
+
+    #video-container {
+      width: 100%;
+      max-width: 800px;
+      aspect-ratio: 16 / 9;
+      margin-bottom: 10px;
+      border: 5px solid #ff0000;
+      box-shadow: 0 0 30px #ff0000;
+      border-radius: 10px;
+      background-color: #111;
+    }
+
+    iframe {
+      width: 100%;
+      height: 100%;
+      border: none;
+      border-radius: 5px;
+    }
+
+    #video-title {
+      max-width: 800px;
+      text-align: center;
+      font-size: 22px;
+      font-weight: bold;
+      margin-bottom: 25px;
+      color: #ff4d4d;
+      text-shadow: 1px 1px 5px black;
+      min-height: 2.5em;
+      font-family: 'Creepster', cursive;
+    }
+
+    button {
+      background-color: #b30000;
+      border: none;
+      padding: 14px 30px;
+      color: white;
+      font-weight: bold;
+      cursor: pointer;
+      border-radius: 10px;
+      margin-bottom: 40px;
+      font-size: 18px;
+      transition: background-color 0.3s ease;
+      box-shadow: 0 0 10px #b30000;
+      font-family: 'Trebuchet MS', sans-serif;
+    }
+
+    button:hover {
+      background-color: #800000;
+      box-shadow: 0 0 20px #800000;
+    }
+
+    #unique-string {
+      max-width: 90%;
+      background-color: #1a0000;
+      border-radius: 10px;
+      padding: 20px;
+      font-family: 'Courier New', Courier, monospace;
+      font-size: 14px;
+      white-space: pre-wrap;
+      word-break: break-word;
+      color: #ff9999;
+      user-select: text;
+      margin-top: auto;
+      box-shadow: 0 0 10px #660000 inset;
+    }
+
+    #propaganda-piscante {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      background-color: #b30000;
+      color: white;
+      font-weight: bold;
+      padding: 12px 18px;
+      border-radius: 12px;
+      font-size: 16px;
+      cursor: pointer;
+      animation: piscar 1s infinite alternate;
+      box-shadow: 0 0 20px #b30000;
+      z-index: 1000;
+      user-select: none;
+      font-family: 'Trebuchet MS', sans-serif;
+    }
+
+    @keyframes piscar {
+      0% {opacity: 1;}
+      100% {opacity: 0.3;}
+    }
+
+    @media (max-width: 600px) {
+      #video-container {
+        max-width: 100%;
+        aspect-ratio: auto;
+        height: 215px;
+      }
+
+      #video-title {
+        font-size: 18px;
+      }
+
+      #propaganda-piscante {
+        font-size: 14px;
+        padding: 8px 12px;
+        top: 10px;
+        right: 10px;
+      }
+    }
+  </style>
+  <!-- Fonte para estilo "Creepster" de terror (Google Fonts) -->
+  <link href="https://fonts.googleapis.com/css2?family=Creepster&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <h1>Rica Games - Sexta-feira 13</h1>
+
+  <div id="video-container"></div>
+
+  <div id="video-title">Carregando título...</div>
+
+  <button onclick="trocarVideo()">Trocar Vídeo Assustador</button>
+
+  <div id="unique-string">Carregando conteúdo único...</div>
+
+  <div id="propaganda-piscante">OFERTA IMPERDÍVEL!</div>
+
+  <script>
+    const videos = [
+      {id:"TNCxUDta9Go", titulo:"Olhos famintos 2 filme de terorr #vilavelha"},
+      {id:"8vVl96rfwcc",titulo:"pânico na floresta/pânico na Floresta - Horror Sem Limites FILME DE TERROR COMPLETO Dublado"},
+      {id:"enkQ1tggYa4",titulo:"TERRA MALDITA FILME DE TERROR PESADO - FILME COMPLETO E DUBLADO 2023"},
+      {id:"fh4uJZLbXmg",titulo:"vovó Krampus (2024) [Terror] [Natal] Filme Completo Dublado Em Português | Granny Krampus"}
+
+    ];
+
+    const propagandas = [
+      "https://randomico02.vercel.app/",
+      "https://randomico02.netlify.app/",
+      "https://carro.wuaze.com/conferir/",
+      "https://arquivos.wuaze.com/conferir/",
+      "https://hostinger.com.br/?REFERRALCODE=1VICTOR444",
+      "https://geocredibnkvitoria.com/",
+      "https://jogosantigos472302513.wordpress.com/",
+      "https://brasilbrasileiross.blogspot.com/",
+      "https://ocomerciobrasileironoticia.blogspot.com/2025/05/erp-profissional-para-empresas.html",
+      "https://vendaschamada.blogspot.com/2025/07/quer-comprar-seu-carro-sem-pagar-juros.html",
+      "https://vendaschamada.blogspot.com/2025/07/precisando-de-uma-vps-poderosa-rapida-e.html",
+      "https://vendaschamada.blogspot.com/2025/07/consorcio-inteligente-o-caminho-mais.html"
+    ];
+
+    function getRandomVideo() {
+      return videos[Math.floor(Math.random() * videos.length)];
+    }
+
+    function getRandomAdURL() {
+      return propagandas[Math.floor(Math.random() * propagandas.length)];
+    }
+
+    function trocarVideo() {
+      const video = getRandomVideo();
+      const container = document.getElementById('video-container');
+      const tituloEl = document.getElementById('video-title');
+
+      container.innerHTML = `<iframe 
+        src="https://www.youtube.com/embed/${video.id}" 
+        allowfullscreen 
+        loading="lazy" 
+        title="${video.titulo}"
+      ></iframe>`;
+
+      tituloEl.textContent = video.titulo;
+    }
+
+    function gerarStringUnica(tamanho = 300) {
+      const chars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!@#$%^&*()_+-=[]{}|;:,.<>?';
+      let resultado = '';
+      for(let i = 0; i < tamanho; i++) {
+        resultado += chars.charAt(Math.floor(Math.random() * chars.length));
+      }
+      return resultado;
+    }
+
+    document.addEventListener('DOMContentLoaded', () => {
+      trocarVideo();
+      document.getElementById('unique-string').textContent = gerarStringUnica();
+
+      const adButton = document.getElementById('propaganda-piscante');
+      adButton.addEventListener('click', () => {
+        const randomAdURL = getRandomAdURL();
+        window.open(randomAdURL, '_blank');
+      });
+    });
+  </script>
+
+</body>
+</html>
